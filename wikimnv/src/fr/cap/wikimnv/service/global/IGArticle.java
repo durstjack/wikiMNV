@@ -9,12 +9,10 @@ import fr.cap.wikimnv.exception.MNVException;
 
 
 public interface IGArticle extends ICRUD {
-	Set<Article> rechercheParTexte(String texte) ;
-	Set<Article> rechercheParTag(String tag) ;
-	void accrocher(Tag tag) ;
-	void decrocher(Tag tag) ;
-	void noter(Article article) ;
-	void signaler(Article article) ;
+	Set<Article> rechercher(String texte, TypeRecherche type) ;	void accrocher(Tag tag) ;
+	boolean decrocher(Tag tag) ;
+	boolean noter(Article article) ;
+	boolean signaler(Article article) ;
 	
-	void ajouterFavorit(User user, Article article) ;
+	boolean ajouterFavorit(User user, Article article) ;
 	}
