@@ -2,8 +2,11 @@ package fr.cap.wikimnv.consultation.service;
 
 import java.util.Set;
 
-import fr.cap.wikimnv.domain.pojo.Commentaire;
-import fr.cap.wikimnv.domain.pojo.Etat;
+
+
+
+import fr.cap.wikimnv.consultation.domaine.pojo.* ;
+
 
 public interface IGCommentaire {
 	Set<Commentaire> lister() ;
