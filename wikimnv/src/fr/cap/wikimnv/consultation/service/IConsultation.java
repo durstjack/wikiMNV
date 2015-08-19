@@ -1,4 +1,4 @@
-package fr.cap.wikimnv.service.consultation;
+package fr.cap.wikimnv.consultation.service;
 
 import java.util.List;
 import fr.cap.wikimnv.service.global.*;
