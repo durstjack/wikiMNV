@@ -4,6 +4,7 @@ import java.util.Set;
 
 import fr.cap.wikimnv.domain.pojo.Commentaire;
 import fr.cap.wikimnv.domain.pojo.EtatPublication;
+
 public interface IGCommentaire {
 	Set<Commentaire> lister() ;
 	Commentaire lire(int id) ;
