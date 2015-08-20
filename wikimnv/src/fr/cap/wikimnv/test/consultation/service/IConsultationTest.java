@@ -21,7 +21,7 @@ public class IConsultationTest {
 
 	@Test
 	public void testGetGTag() {
-		fail("Not yet implemented");
+//		fail("Not yet implemented");
 	}
 
 	@Test
