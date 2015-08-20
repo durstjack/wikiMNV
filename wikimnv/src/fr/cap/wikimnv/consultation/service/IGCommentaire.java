@@ -5,14 +5,14 @@ import java.util.Set;
 
 
 
-import fr.cap.wikimnv.consultation.domaine.pojo.* ;
+
+import fr.cap.wikimnv.consultation.domaine.pojo.Commentaire;
 
 
 public interface IGCommentaire {
 	Set<Commentaire> lister() ;
-	Commentaire getById(int idArticle) ;
-	int creer() ;
-	int supprimer(int id) ;
-	void changerEtat(Etat etat) ;
-	
+	Commentaire lire(int id) ;
+	int sauver(Commentaire commentaire) ;
+	int supprimer(Commentaire commentaire) ;
+	boolean banir(boolean etat) ;
 	}
