@@ -19,27 +19,27 @@ public class IGCommentaireTest {
 	Commentaire commentaire = new Commentaire(profil, template) ;
 	
 	@Test
-	public void testLister() {
-		Gcommentaire.lister() ;
+	public void testLister() throws MNVException {
+		Gcommentaire.lister(null) ;
 	}
 
 	@Test
-	public void testLire() {
-		Gcommentaire.lire(commentaire) ;
+	public void testLire() throws MNVException {
+		Gcommentaire.lire(commentaire, null) ;
 	}
 
 	@Test
-	public void testSauver() {
+	public void testSauver() throws MNVException {
 		Gcommentaire.sauver(commentaire) ;
 	}
 
 	@Test
-	public void testSupprimer() {
+	public void testSupprimer() throws MNVException {
 		Gcommentaire.supprimer(commentaire);
 	}
 
 	@Test
-	public void testBanir() {
+	public void testBanir() throws MNVException {
 		Gcommentaire.banir(commentaire, null);
 		
 	}

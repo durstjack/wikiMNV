@@ -6,42 +6,96 @@ import fr.cap.wikimnv.consultation.service.IGCommentaire;
 import fr.cap.wikimnv.domain.dao.IDAOGenric;
 import fr.cap.wikimnv.domain.pojo.Commentaire;
 import fr.cap.wikimnv.domain.pojo.EtatPublication;
+import fr.cap.wikimnv.exception.MNVException;
+import fr.cap.wikimnv.global.service.ICRUD;
 import fr.cap.wikimnv.global.service.impl.CrudImpl;
 
 public class GCommentaireImpl implements IGCommentaire {
-	CrudImpl crud ;
+	ICRUD crud ;
 	
 	public GCommentaireImpl() {
 		crud = new CrudImpl();
 	}
-	@Override
-	public Set<Commentaire> lister() {
-		// Renvoie la liste des comentaires
-		return  (Set<Commentaire>) crud.lister(Commentaire.class) ;
+	
+	/**
+	 * Permet d'obtenir la liste de tous les commentaires
+	 *@return  Renvoie la liste des comentaires
+	 *@author  Sohail, Messan  
+	 */ 
+	
+	public Set<?> lister() throws MNVException {
+		return  crud.lister(Commentaire.class) ;
 	}
+	
+	/**
+	 * Permet de chargé un commentaire depuis la base
+	 * @param Le commentaire à lire
+	 * @return  Renvoie le commentaire demandé en paramètre
+	 * @author Sohail, Messan
+	 */ 
 
-	@Override
-	public Commentaire lire(Commentaire commentaire) {
-		// Renvoie le commentaire demandé en paramètre
-		return (Commentaire) crud.lire(commentaire, Commentaire.class) ;
+	
+	public Object lire(Object commentaire) throws MNVException {
+		return crud.lire(commentaire, Commentaire.class) ;
 	}
+	
+	/**
+	 * Permet de sauvegarde un commentaire
+	 * @param Le commentaire à sauvegarder
+	 * @return le commentaire passé en paramètre après le sauvegarde
+	 * @author Sohail, Messan
+	 * @throws MNVException 
+	 */ 
 
-	@Override
-	public Commentaire sauver(Commentaire commentaire) {
-		// Sauvegarde le commentaire passé en paramètre
-		return (Commentaire) crud.sauver(commentaire) ;
+	
+	public Object sauver(Object commentaire) throws MNVException {
+		return crud.sauver(commentaire) ;
 	}
+	
+	/**
+	 * Supprime le commentaire depuis la base passé en paramètre
+	 * @param le commentaire à supprimer
+	 * @return le commentaire supprimé 
+	 * @author Sohail, Messan
+	 * @throws MNVException 
+	 */
 
-	@Override
-	public Commentaire supprimer(Commentaire commentaire) {
-		// Supprime le commentaire depuis la base passé en paramètre
+	
+	public Commentaire supprimer(Commentaire commentaire) throws MNVException {
 		return (Commentaire) crud.supprimer(commentaire) ;
 	}
 
-	@Override
-	public Commentaire banir(Commentaire commentaire, EtatPublication etat) {
+	/**
+	 * Permet de publier ou dépublier un commentaire
+	 * @param le commentaire à banir
+	 * @return le commentaire banis
+	 * @author Sohail, Messan
+	 * @throws MNVException 
+	 */
+	
+	
+	public Commentaire banir(Commentaire commentaire, EtatPublication etat) throws MNVException {
 		// Publie ou dépublie un commentaire
 		commentaire.setEtat(etat);
-		return sauver(commentaire) ;
+		return (Commentaire) sauver(commentaire) ;
+	}
+
+	@Override
+	public Set<?> lister(Class cls) throws MNVException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Object lire(Object obj, Class cls) throws MNVException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Object supprimer(Object obj) throws MNVException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
+	
