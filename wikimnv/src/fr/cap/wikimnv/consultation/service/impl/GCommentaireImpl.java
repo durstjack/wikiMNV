@@ -48,12 +48,4 @@ public class GCommentaireImpl implements IGCommentaire {
 		commentaire.setEtat(etat);
 		return commentaire ;
 	}
-	@Override
-	public Commentaire lire(int id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-
 }
