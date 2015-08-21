@@ -7,6 +7,9 @@ import org.junit.Test;
 import fr.cap.wikimnv.consultation.service.IGCommentaire;
 import fr.cap.wikimnv.consultation.service.impl.GCommentaireImpl;
 import fr.cap.wikimnv.domain.pojo.Commentaire;
+import fr.cap.wikimnv.domain.pojo.EtatPublication;
+import fr.cap.wikimnv.domain.pojo.Profil;
+import fr.cap.wikimnv.domain.pojo.Template;
 
 public class IGCommentaireTest {
 
@@ -19,22 +22,23 @@ public class IGCommentaireTest {
 
 	@Test
 	public void testLire() {
-		Gcommentaire.lire();
+		Gcommentaire.lire(new Commentaire(new Profil(), new Template("NomTest")));
 	}
 
 	@Test
 	public void testSauver() {
-		Gcommentaire.sauver();
+		Gcommentaire.sauver(new Commentaire(new Profil(), new Template("NomTest")));
 	}
 
 	@Test
 	public void testSupprimer() {
-		Gcommentaire.supprimer(commentaire);
+		Gcommentaire.supprimer(new Commentaire(new Profil(), new Template("NomTest")));
 	}
 
 	@Test
 	public void testBanir() {
-		Gcommentaire.banir(commentaire, etat);
+		Gcommentaire.banir(new Commentaire(new Profil(), new Template("NomTest")), EtatPublication.BROUILLON) ;
+		
 	}
 
 }
