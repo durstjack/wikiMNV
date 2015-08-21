@@ -7,7 +7,7 @@ import fr.cap.wikimnv.domain.pojo.EtatPublication;
 
 public interface IGCommentaire {
 	Set<Commentaire> lister() ;
-	Commentaire lire(int id) ;
+	Commentaire lire(Commentaire commentaire) ;
 	Commentaire sauver(Commentaire commentaire) ;
 	Commentaire supprimer(Commentaire commentaire) ;
 	Commentaire banir(Commentaire commentaire,  EtatPublication etat) ;
