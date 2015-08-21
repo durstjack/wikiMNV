@@ -21,12 +21,20 @@ public class IConsultationTest {
 
 	@Test
 	public void testGetGTag() {
-//		fail("Not yet implemented");
+		try {
+			consultation.getGTag();
+		} catch (MNVException e) {
+			fail(e.getMessage());
+		}
 	}
 
 	@Test
 	public void testGetGCommentaire() {
-//		fail("Not yet implemented");
+		try {
+			consultation.getGCommentaire();
+		} catch (MNVException e) {
+			fail(e.getMessage());
+		}
 	}
 
 }

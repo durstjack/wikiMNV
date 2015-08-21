@@ -3,6 +3,9 @@
 	<name>wikimnv</name>
 	<comment></comment>
 	<projects>
+		<project>MNVContrib</project>
+		<project>WikiMNV_moderation</project>
+		<project>wikitransverse</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
