@@ -1,15 +1,14 @@
 package fr.cap.wikimnv.test.consultation.service;
 
-import static org.junit.Assert.fail;
-
 import org.junit.Test;
 
 import fr.cap.wikimnv.consultation.service.IGCommentaire;
 import fr.cap.wikimnv.consultation.service.impl.GCommentaireImpl;
-import fr.cap.wikimnv.domain.pojo.Commentaire;
-import fr.cap.wikimnv.domain.pojo.Profil;
-import fr.cap.wikimnv.domain.pojo.Template;
 import fr.cap.wikimnv.exception.MNVException;
+import fr.cap.wikimnv.global.domain.pojo.Commentaire;
+import fr.cap.wikimnv.global.domain.pojo.Profil;
+import fr.cap.wikimnv.global.domain.pojo.Template;
+
 
 public class IGCommentaireTest {
 

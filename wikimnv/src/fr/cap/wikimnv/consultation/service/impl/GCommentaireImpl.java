@@ -3,12 +3,12 @@ package fr.cap.wikimnv.consultation.service.impl;
 import java.util.Set;
 
 import fr.cap.wikimnv.consultation.service.IGCommentaire;
-import fr.cap.wikimnv.domain.dao.IDAOGenric;
-import fr.cap.wikimnv.domain.pojo.Commentaire;
-import fr.cap.wikimnv.domain.pojo.EtatPublication;
 import fr.cap.wikimnv.exception.MNVException;
+import fr.cap.wikimnv.global.domain.pojo.Commentaire;
+import fr.cap.wikimnv.global.domain.pojo.EtatPublication;
 import fr.cap.wikimnv.global.service.ICRUD;
 import fr.cap.wikimnv.global.service.impl.CrudImpl;
+
 
 public class GCommentaireImpl implements IGCommentaire {
 	ICRUD crud ;
