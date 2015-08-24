@@ -5,11 +5,11 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import fr.cap.wikimnv.consultation.service.IConsultation;
-import fr.cap.wikimnv.consultation.service.impl.ConsultationImpl;
+import fr.cap.wikimnv.consultation.service.impl.ServiceConsultationImpl;
 import fr.cap.wikimnv.exception.MNVException;
 
 public class IConsultationTest {
-	IConsultation consultation = new ConsultationImpl();
+	IConsultation consultation = new ServiceConsultationImpl();
 	@Test
 	public void testGetGArticle() {
 		try {
@@ -31,7 +31,7 @@ public class IConsultationTest {
 	@Test
 	public void testGetGCommentaire() {
 		try {
-			consultation.getGCommentaire();
+			consultation.getServiceCommentaire();
 		} catch (MNVException e) {
 			fail(e.getMessage());
 		}

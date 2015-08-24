@@ -11,5 +11,5 @@ import java.util.Set;
 public interface IConsultation {
 	public IGArticle getGArticle() throws MNVException ;
 	public IGTag getGTag() throws MNVException ;
-	public IServiceCommentaire getGCommentaire() throws MNVException ;
+	public IServiceCommentaire getServiceCommentaire() throws MNVException ;
 }
