@@ -6,6 +6,6 @@ import fr.cap.wikimnv.global.domain.pojo.EtatPublication;
 import fr.cap.wikimnv.global.service.ICRUDGeneric;
 
 
-public interface IGCommentaire extends ICRUDGeneric {
+public interface IServiceCommentaire extends ICRUDGeneric {
 	Commentaire banir(Commentaire commentaire,  EtatPublication etat) throws MNVException ;
 	}

@@ -2,17 +2,17 @@ package fr.cap.wikimnv.test.consultation.service;
 
 import org.junit.Test;
 
-import fr.cap.wikimnv.consultation.service.IGCommentaire;
-import fr.cap.wikimnv.consultation.service.impl.GCommentaireImpl;
+import fr.cap.wikimnv.consultation.service.IServiceCommentaire;
+import fr.cap.wikimnv.consultation.service.impl.ServiceCommentaireImpl;
 import fr.cap.wikimnv.exception.MNVException;
 import fr.cap.wikimnv.global.domain.pojo.Commentaire;
 import fr.cap.wikimnv.global.domain.pojo.Profil;
 import fr.cap.wikimnv.global.domain.pojo.Template;
 
 
-public class IGCommentaireTest {
+public class IServiceCommentaireTest {
 
-	IGCommentaire Gcommentaire = new GCommentaireImpl();
+	IServiceCommentaire Gcommentaire = new ServiceCommentaireImpl();
 	Profil profil = new Profil() ;
 	Template template = new Template("NomTest") ;
 	Commentaire commentaire = new Commentaire(profil, template) ;

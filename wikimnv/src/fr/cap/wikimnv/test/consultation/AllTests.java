@@ -5,10 +5,10 @@ import org.junit.runners.Suite;
 import org.junit.runners.Suite.SuiteClasses;
 
 import fr.cap.wikimnv.test.consultation.service.IConsultationTest;
-import fr.cap.wikimnv.test.consultation.service.IGCommentaireTest;
+import fr.cap.wikimnv.test.consultation.service.IServiceCommentaireTest;
 
 @RunWith(Suite.class)
-@SuiteClasses({ IConsultationTest.class, IGCommentaireTest.class })
+@SuiteClasses({ IConsultationTest.class, IServiceCommentaireTest.class })
 public class AllTests {
 	
 

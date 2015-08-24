@@ -2,7 +2,7 @@ package fr.cap.wikimnv.consultation.service.impl;
 
 import java.util.Set;
 
-import fr.cap.wikimnv.consultation.service.IGCommentaire;
+import fr.cap.wikimnv.consultation.service.IServiceCommentaire;
 import fr.cap.wikimnv.exception.MNVException;
 import fr.cap.wikimnv.global.domain.pojo.Commentaire;
 import fr.cap.wikimnv.global.domain.pojo.EtatPublication;
@@ -10,10 +10,10 @@ import fr.cap.wikimnv.global.service.ICRUD;
 import fr.cap.wikimnv.global.service.impl.CrudImpl;
 
 
-public class GCommentaireImpl implements IGCommentaire {
+public class ServiceCommentaireImpl implements IServiceCommentaire {
 	ICRUD crud ;
 	
-	public GCommentaireImpl() {
+	public ServiceCommentaireImpl() {
 		crud = new CrudImpl();
 	}
 	
