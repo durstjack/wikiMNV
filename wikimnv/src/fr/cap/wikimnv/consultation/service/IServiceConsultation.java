@@ -9,7 +9,7 @@ import fr.cap.wikimnv.exception.*;
 import java.util.Set;
 
 public interface IServiceConsultation {
-	public IGArticle getGArticle() throws MNVException ;
-	public IGTag getGTag() throws MNVException ;
+	public IGArticle getServiceArticle() throws MNVException ;
+	public IGTag getServiceTag() throws MNVException ;
 	public IServiceCommentaire getServiceCommentaire() throws MNVException ;
 }
