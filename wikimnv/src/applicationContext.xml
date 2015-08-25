@@ -4,6 +4,7 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
             http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
             
             	    <bean id="sc" class="fr.cap.wikimnv.consultation.service.impl.ServiceCommentaireImpl"/>
             	    <bean id="sa" class="fr.cap.wikimnv.contribution.service.impl.ServiceArticleImpl"/>
