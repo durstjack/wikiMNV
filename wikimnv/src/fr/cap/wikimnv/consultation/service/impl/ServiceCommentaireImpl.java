@@ -15,10 +15,11 @@ import fr.cap.wikimnv.global.service.impl.CrudImpl;
 
 public class ServiceCommentaireImpl implements IServiceCommentaire {
 	ICRUD crud ;
-	Logger loger = LoggerFactory.getLogger(ServiceCommentaireImpl.class) ;
+	Logger logger ;  
 	
 	public ServiceCommentaireImpl() {
 		crud = new CrudImpl();
+		logger = LoggerFactory.getLogger(ServiceCommentaireImpl.class) ;
 		
 		
 	}
@@ -30,7 +31,7 @@ public class ServiceCommentaireImpl implements IServiceCommentaire {
 	 */ 
 	
 	public Set<?> lister() throws MNVException {
-		loger.error("Liste demandée");
+		logger.error("Erreur ! Liste demandée n'existe pas !");
 		return  crud.lister(Commentaire.class) ;
 	}
 	
@@ -89,7 +90,7 @@ public class ServiceCommentaireImpl implements IServiceCommentaire {
 
 	@Override
 	public Set<?> lister(Class cls) throws MNVException {
-		// TODO Auto-generated method stub
+		logger.error("Erreur ! Liste demandée n'existe pas !");
 		return null;
 	}
 
