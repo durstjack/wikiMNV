@@ -2,6 +2,9 @@ package fr.cap.wikimnv.consultation.service.impl;
 
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import fr.cap.wikimnv.consultation.service.IServiceCommentaire;
 import fr.cap.wikimnv.exception.MNVException;
 import fr.cap.wikimnv.global.domain.pojo.Commentaire;
@@ -12,9 +15,12 @@ import fr.cap.wikimnv.global.service.impl.CrudImpl;
 
 public class ServiceCommentaireImpl implements IServiceCommentaire {
 	ICRUD crud ;
+	Logger loger = LoggerFactory.getLogger(ServiceCommentaireImpl.class) ;
 	
 	public ServiceCommentaireImpl() {
 		crud = new CrudImpl();
+		
+		
 	}
 	
 	/**
@@ -24,6 +30,7 @@ public class ServiceCommentaireImpl implements IServiceCommentaire {
 	 */ 
 	
 	public Set<?> lister() throws MNVException {
+		loger.error("Liste demandée");
 		return  crud.lister(Commentaire.class) ;
 	}
 	

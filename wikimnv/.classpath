@@ -17,8 +17,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Users/mgnemegn/Desktop/wikimnv-core-2015-08-21.jar"/>
-	<classpathentry kind="lib" path="D:/Users/mgnemegn/Desktop/wikimnv-contribution-2015-08-21.jar"/>
-	<classpathentry kind="lib" path="D:/Users/mgnemegn/Desktop/wikimnv-moderation-2015-08-21.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Stagiaire/Desktop/DATA/Livraisons/wikimnv-contribution-2015-08-21.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Stagiaire/Desktop/DATA/Livraisons/wikimnv-core-2015.08.21.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
