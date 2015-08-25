@@ -14,5 +14,4 @@
 		<property name="serviceArticle" ref="sa"></property>
 		<property name="serviceTag" ref="st"></property>
 	</bean>
-	
 </beans>
