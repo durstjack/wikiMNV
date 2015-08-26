@@ -15,4 +15,20 @@
 		<property name="serviceArticle" ref="sa"></property>
 		<property name="serviceTag" ref="st"></property>
 	</bean>
+	
+		<bean id="sLogger" class="fr.cap.wikimnv.consultation.aspect.LoggerMNV" />
+
+	<aop:config>
+		<aop:aspect id="sLoggerAspect" ref="sLogger">
+			<aop:pointcut id="perfLogger"
+				expression="execution(* fr.cap.wikimnv.consultation.service.impl..*(..))" />
+			<aop:around pointcut-ref="perfLogger" method="logProcess" />
+			<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+			<aop:pointcut id="eventLogger"
+				expression="execution(* fr.cap.wikimnv.consultation.service.impl..set*(..))" />
+			<aop:before pointcut-ref="eventLogger" method="logEvent" />
+		</aop:aspect>
+	</aop:config>
+
+
 </beans>

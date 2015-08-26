@@ -2,6 +2,8 @@ package fr.cap.wikimnv.consultation.service.impl;
 
 import java.util.Set;
 
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,11 +17,10 @@ import fr.cap.wikimnv.global.service.impl.CrudImpl;
 
 public class ServiceCommentaireImpl implements IServiceCommentaire {
 	ICRUD crud ;
-	Logger logger ;  
+	  
 	
 	public ServiceCommentaireImpl() {
 		crud = new CrudImpl();
-		logger = LoggerFactory.getLogger(ServiceCommentaireImpl.class) ;
 		
 		
 	}
@@ -31,7 +32,7 @@ public class ServiceCommentaireImpl implements IServiceCommentaire {
 	 */ 
 	
 	public Set<?> lister() throws MNVException {
-		logger.error("Erreur ! Liste demandée n'existe pas !");
+		
 		return  crud.lister(Commentaire.class) ;
 	}
 	
@@ -90,7 +91,7 @@ public class ServiceCommentaireImpl implements IServiceCommentaire {
 
 	@Override
 	public Set<?> lister(Class cls) throws MNVException {
-		logger.error("Erreur ! Liste demandée n'existe pas !");
+		
 		return null;
 	}
 
