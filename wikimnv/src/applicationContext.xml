@@ -15,11 +15,4 @@
 		<property name="serviceArticle" ref="sa"></property>
 		<property name="serviceTag" ref="st"></property>
 	</bean>
-	
-	<jaxws:server serviceClass="fr.cap.wikimnv.consultation.logManager.ILog"
-		address="/loggerService" serviceBean="#ServiceLog">
-	</jaxws:server>
-	<bean id="ServiceLog" class="fr.cap.wikimnv.consultation.logManager.ServiceLog" />
-
-
 </beans>
